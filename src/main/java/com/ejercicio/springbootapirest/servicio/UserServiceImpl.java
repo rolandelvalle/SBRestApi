@@ -1,14 +1,15 @@
 package com.ejercicio.springbootapirest.servicio;
 
 import org.apache.catalina.User;
+import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
 import java.util.List;
 
+@Service
 public class UserServiceImpl implements UserService{
 
-    HashMap<String, Object> map = new HashMap <String, Object> ();
-    HashMap x = new HashMap ();
+    HashMap<User, Object> userHashMap = new HashMap<>();
 
     @Override
     public User create(User user) {
@@ -26,8 +27,8 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
-    public void deleteById(String id) {
-
+    public User deleteById(String id) {
+        return null;
     }
 
     @Override
